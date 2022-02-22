@@ -1,30 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <title>Todo list</title>
-
-  <link href="./style.css" rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>Todo List</h1>
-    <form action="">
-      <input type="text" id="item" placeholder="À faire" autocomplete="off" minlength="2">
-    </form>
-    <ul id="list"></ul>
-  </div>
+  <h3>Entrez le nombre de minutes</h3>
+
+  <form id="form">
+    <input type="number" min="1" max="99" size="1" maxlength="2" id="choice">
+    <input id="start" type="submit" value="GO">
+  </form>
+
+  <div id="countdownDisplay"></div>
 
 
-  <script src="./script.js"></script>
+  <script src="./index.js"></script>
 </body>
-
-
 
 </html>
