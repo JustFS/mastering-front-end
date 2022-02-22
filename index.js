@@ -1,12 +1,12 @@
-const sidebar = document.getElementById("side-bar");
-const content = document.querySelector(".content");
+function getColor() {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
 
-btn.addEventListener("click", () => {
-  sidebar.classList.toggle("active");
-});
+  const color = `rgb(${r}, ${g}, ${b})`;
 
-content.addEventListener("click", () => {
-  sidebar.classList.remove("active");
-});
+  document.body.style.background = color;
+  document.body.innerHTML = `<h2>${color}</h2>`;
+}
 
-// Priorités en CSS : !important > id > classe > baliseHtml
+setInterval(getColor, 1000);

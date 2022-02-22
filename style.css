@@ -1,79 +1,16 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins");
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-}
 body {
-  background-color: #383838;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s linear;
 }
-.content {
-  color: #09fbba;
-  transition: 1s;
-}
-h1 {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 4rem;
-  margin-top: 20px;
-}
-p {
-  padding: 30px 50px;
-}
-#side-bar {
-  position: absolute;
-  width: 230px;
-  height: 100%;
-  background: #09fbba;
-  top: 0;
-  left: -230px;
-  transition: 0.5s ease-out;
-  z-index: 4;
-}
-.toggle-btn {
-  position: absolute;
-  top: 30px;
-  left: 240px;
-  cursor: pointer;
-  height: 50px;
-  width: 50px;
-}
-.toggle-btn span {
-  width: 60px;
-  height: 10px;
-  border-radius: 5px;
-  background: #09fbba;
-  display: block;
-  margin-top: 4px;
-  transition: 0.3s ease;
-}
-li {
-  color: #292929;
-  list-style: none;
-  font-size: 2.5rem;
-  cursor: pointer;
-  padding-left: 5px;
-}
-li:hover {
-  background: #292929;
-  color: #fcfcfb;
-}
-#side-bar.active {
-  left: 0;
-}
-.active span {
-  position: absolute;
-}
-.active span:nth-child(1) {
-  transform: rotate(45deg);
-}
-.active span:nth-child(2) {
-  opacity: 0;
-}
-.active span:nth-child(3) {
-  transform: rotate(-45deg);
-}
-.active ~ .content {
-  opacity: 0.3;
+h2 {
+  margin: 0;
+  background: black;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
 }
