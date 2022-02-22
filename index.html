@@ -6,26 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-
-  <div class="card">
-    <h2>Book your holiday</h2>
-    <div><span id="nightPrice">46</span> € / night</div>
-
-    <label for="">Start</label>
-    <input id="start_date" type="date" required />
-    <label for="">End</label>
-    <input id="end_date" type="date" required />
-
-    <h3>Total : <span id="totalPerNight"></span> €</h3>
-    <button class="btn btn cyan accent-3">Validate</button>
+  <div class="filter-container">
+    <input type="text" id="inputSearch" placeholder="Rechercher">
+    <div class="range-container">
+      <input type="range" value="24" max="250" id="inputRange">
+      <span id="rangeValue">24</span>
+    </div>
+    <button class="btnSort" id="minToMax">Tri croissant</button>
+    <button class="btnSort" id="maxToMin">Tri décroissant</button>
+    <button class="btnSort" id="alpha">Tri Alphabétique</button>
   </div>
-  <script src="./index.js"></script>
 
+  <div class="countries-container"></div>
+
+  <script src="index.js"></script>
 </body>
 
 </html>

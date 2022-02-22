@@ -1,44 +1,14 @@
-// Convert today date to input format
-const today = new Date().toISOString().split("T")[0];
-start_date.value = today;
-start_date.min = today;
+// 1 - Tester le lien de l'API dans le navigateur (https://restcountries.com/v3.1/all)
 
-// Tomorrow date calc
-let tomorrow = new Date();
-tomorrow.setDate(tomorrow.getDate() + 1);
+// 2 - Créer une fonction pour "fetcher" les données, afficher les données dans la console.
 
-// Convert to input format
-let tomorrowFormat = tomorrow.toISOString().split("T")[0];
-end_date.value = tomorrowFormat;
-end_date.min = tomorrowFormat;
+// 3 - Passer les données à une variable
 
-start_date.addEventListener("change", (e) => {
-  let day = new Date(e.target.value);
+// 4 - Créer une fonction d'affichage, et paramétrer l'affichage des cartes de chaque pays grace à la méthode MAP
 
-  if (end_date.value < start_date.value) {
-    day.setDate(day.getDate() + 1);
-    end_date.value = day.toISOString().split("T")[0];
-  }
-});
+// 5 - Récupérer ce qui est tapé dans l'input et filtrer (avant le map) les données
+coutry.name.includes(inputSearch.value);
 
-end_date.addEventListener("change", (e) => {
-  let day = new Date(e.target.value);
+// 6 - Avec la méthode Slice gérer le nombre de pays affichés (inputRange.value)
 
-  if (end_date.value < start_date.value) {
-    day.setDate(day.getDate() - 1);
-    start_date.value = day.toISOString().split("T")[0];
-  }
-});
-
-const bookingCalc = () => {
-  let diffTime = Math.abs(
-    new Date(end_date.value) - new Date(start_date.value)
-  );
-  let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-  totalPerNight.textContent = diffDays * nightPrice.textContent;
-};
-
-start_date.addEventListener("change", bookingCalc);
-end_date.addEventListener("change", bookingCalc);
-bookingCalc();
+// 7 - Gérer les 3 boutons pour trier (méthode sort()) les pays
