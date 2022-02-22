@@ -1,19 +1,7 @@
-const mouses = document.querySelectorAll(".mouse");
+// Créer un événément au scroll
 
-window.addEventListener("mousemove", (e) => {
-  mouses.forEach((mouse) => {
-    mouse.style.top = e.y + "px";
-    mouse.style.left = e.x + "px";
-  });
-});
+// Cacher la navbar si l'utilisateur comment à descendre et la sortir quand il remonte
 
-// window.addEventListener("mousemove", (e) => {
-//   cursor.style.top = e.y + "px";
-//   cursor.style.left = e.x + "px";
+// Stocker la valeur du précédent niveau de scroll pour savoir si l'on est monté ou descendu
 
-//   mouse1.style.top = e.y + "px";
-//   mouse1.style.left = e.x + "px";
-
-//   mouse2.style.top = e.y + "px";
-//   mouse2.style.left = e.x + "px";
-// })
+// Connaitre niveau de scroll (window.scrollY)
