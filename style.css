@@ -26,3 +26,24 @@ input[type="range"] {
   font-size: 1.2rem;
   transform: translateY(-3px);
 }
+.countries-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.card {
+  flex: 1 0 20%;
+  min-width: 260px;
+  background: rgb(17, 17, 17);
+  margin: 5px;
+  color: rgb(245, 245, 245);
+  border-radius: 20px;
+  padding: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+img {
+  height: 100px;
+  width: 160px;
+  object-fit: cover;
+}
