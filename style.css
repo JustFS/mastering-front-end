@@ -1,14 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: url(https://i.ibb.co/tmvQ62T/railay-beach-thailand-4k-wallpaper.jpg) center/cover;
+  min-height: 100vh;
+  text-align: center;
+  color: #3e51bd;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+body .card {
+  background: rgba(228, 229, 230, 0.8);
+  padding: 30px;
+  margin: 0 auto;
+  min-width: 300px;
+  width: 80%;
+  max-width: 450px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 3px rgba(51, 51, 51, 0.233);
+          box-shadow: 0 0 3px rgba(51, 51, 51, 0.233);
+}
+
+body .card div {
+  margin: 20px 0 40px 0;
+  font-size: 1.1rem;
+  color: black;
+}
+
+body .card h2 {
+  text-transform: uppercase;
+}
+
+body .card label {
+  display: block;
+}
+
+body .card input {
+  background: none;
+  outline: none;
+  border: 1px solid #3e51bd;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  width: 210px;
   text-align: center;
 }
-#countdownDisplay {
-  font-size: 5rem;
+
+body .card h3 {
+  margin: 20px;
 }
-body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: center;
+
+body .card button {
+  background: #3e51bd;
+  border-radius: 20px;
+  outline: 0;
+  border: none;
+  padding: 1rem;
+  margin: 10px 0;
+  color: white;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
 }
-#countdownDisplay {
-  font-size: 5rem;
-}
+/*# sourceMappingURL=style.css.map */
