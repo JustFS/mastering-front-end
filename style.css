@@ -59,3 +59,21 @@ li:hover {
   background: #292929;
   color: #fcfcfb;
 }
+#side-bar.active {
+  left: 0;
+}
+.active span {
+  position: absolute;
+}
+.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.active span:nth-child(2) {
+  opacity: 0;
+}
+.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.active ~ .content {
+  opacity: 0.3;
+}
