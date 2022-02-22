@@ -1,49 +1,64 @@
-.filter-container {
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+* {
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  padding-bottom: 20px;
 }
-input {
-  margin: 20px auto;
-  display: block;
-  font-size: 1.4rem;
-  text-align: center;
-  transition: 0.2s;
-}
-input:focus {
-  border-radius: 30px;
-  background: rgb(238, 238, 238);
-}
-.range-container {
-  display: flex;
+
+body {
+  display: grid;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
+  min-height: 100vh;
+  background: #2f3542;
+  color: #dfe4ea;
 }
-input[type="range"] {
-  width: 250px;
-  margin: 0 10px 10px 0;
+body h1 {
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-size: 3rem;
 }
-.range-container span {
-  font-size: 1.2rem;
-  transform: translateY(-3px);
+body h1 span,
+body h1 i {
+  color: #ffa502;
 }
-.countries-container {
+body h3 {
+  color: #ffa502;
+  font-size: 1.5rem;
+}
+body .container .choices {
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
+  margin: 3rem auto 3rem;
+  width: 500px;
 }
-.card {
-  flex: 1 0 20%;
-  min-width: 260px;
-  background: rgb(17, 17, 17);
-  margin: 5px;
-  color: rgb(245, 245, 245);
-  border-radius: 20px;
-  padding: 20px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+body .container .choices button {
+  flex: 1 0 45%;
+  width: 200px;
+  height: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  margin: 0.4rem;
+  outline: none;
+  background: #dfe4ea;
+  user-select: none;
+  font-weight: 600;
 }
-img {
-  height: 100px;
-  width: 160px;
-  object-fit: cover;
+body .container .choices button:hover {
+  background: #ffa502;
+  transition: 0.5s;
+}
+body .container .choices button:active {
+  transform: scale(0.9);
+  transition: transform 0.1s;
+}
+body .container .choices button p {
+  font-size: 1.3rem;
+}
+body #progress {
+  font-size: 1.3rem;
+  color: #ffa502;
 }
