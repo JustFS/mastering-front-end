@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "font1";
+  src: url(../fonts/NotoSerifDisplay-VariableFont_wdth\wght.ttf);
+}
+
+body {
+  background: #f0bb59;
+  font-family: "font1", sans-serif;
+}
+
+nav {
+  background: #641523;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+
+h1:after {
+  content: "*";
+  position: absolute;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  color: #641523;
+}
+
+h1:hover:after {
+  font-size: 2em;
+}
+
+section {
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section p {
+  text-align: center;
+  width: 50%;
+}
+/*# sourceMappingURL=index.css.map */

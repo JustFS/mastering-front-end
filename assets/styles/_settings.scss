@@ -1,0 +1,23 @@
+// SETTINGS REGROUPE TOUS LES REGLAGES GENERAUX
+
+@font-face {
+  font-family: "font1";
+  src: url(../fonts/NotoSerifDisplay-VariableFont_wdth\wght.ttf);
+}
+
+$font1: "font1", sans-serif;
+$color1: rgb(100, 21, 35);
+$color2: rgb(240, 187, 89);
+$color3: rgb(22, 22, 22);
+
+// MIXINS
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: $color2;
+  font-family: $font1;
+}
