@@ -1,0 +1,96 @@
+.section2 {
+  color: $white;
+  padding-bottom: 100px;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 620px;
+    width: 100%;
+    background: url(../img/bg-menu-01.jpg) center/cover;
+    left: 50%;
+    bottom: -330px;
+    transform: translate(-50%, -50%);
+  }
+  h2 {
+    color: $color1;
+    font-size: 2rem;
+    font-family: $font1;
+    font-weight: 500;
+    padding: 60px 0 30px;
+  }
+  ul {
+    @include alignChildren(space-around);
+    width: 50%;
+    margin: 30px auto;
+    min-width: 500px;
+
+    @media screen and (max-width: 680px) {
+      min-width: 200px;
+      width: 90%;
+      font-size: 0.65rem;
+    }
+
+    li {
+      border-bottom: 1px solid $grey;
+      padding-bottom: 8px;
+    }
+  }
+  .meals {
+    background: $white;
+    color: $black;
+    width: 85%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 4px solid $color1;
+    padding: 15px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    z-index: 1000;
+    position: relative;
+
+    @media screen and (max-width: 680px) {
+      grid-template-columns: 1fr;
+    }
+
+    .meal {
+      display: grid;
+      grid-template-columns: 25% 60% 15%;
+      border-bottom: 1px dashed $grey;
+      padding: 30px 0;
+      margin: 0 20px;
+
+      img {
+        border-radius: 50px;
+        object-fit: cover;
+        width: 100%;
+        align-self: center;
+      }
+      .meal-text {
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 10px;
+        height: 100%;
+
+        h3 {
+          text-transform: uppercase;
+          color: $black;
+          font-size: 0.8rem;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+      }
+      > p {
+        color: $color1;
+        font-weight: 600;
+        font-size: 1.1rem;
+        display: grid;
+        height: 100%;
+        align-items: center;
+      }
+    }
+  }
+}

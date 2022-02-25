@@ -1,0 +1,58 @@
+.section5 {
+  padding: 70px 0 230px;
+  position: relative;
+
+  &:after {
+    content: "";
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    background: url(../img/gmap.jpg) center/cover;
+    left: 0;
+    bottom: 0;
+  }
+  .quote-container {
+    background: $white;
+    z-index: 3;
+    position: relative;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 65px 70px;
+    box-shadow: 0 0 3px #333;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background: url(../img/avatar-02.jpg) center/cover;
+      height: 60px;
+      width: 60px;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50px;
+    }
+    .text-container {
+      line-height: 30px;
+
+      &:before {
+        content: "❝";
+      }
+      &:after {
+        content: "❞";
+      }
+      &:before,
+      &:after {
+        font-size: 1.5rem;
+      }
+    }
+    h2 {
+      margin: 30px 0 15px;
+      font-family: $font3;
+      font-weight: 100;
+    }
+    p {
+      color: $color1;
+    }
+  }
+}
