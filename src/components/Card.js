@@ -1,18 +1,13 @@
 import React from "react";
 
-const Card = ({ country }) => {
+const Card = ({ meal }) => {
   return (
-    <li className="card">
-      <img
-        src={country.flags.svg}
-        alt={"drapeau " + country.translations.fra.common}
-      />
-      <div className="infos">
-        <h2>{country.translations.fra.common}</h2>
-        <h4>{country.capital}</h4>
-        <p>Pop. {country.population.toLocaleString()}</p>
-      </div>
-    </li>
+    <div className="meal-card">
+      <h2>{meal.strMeal}</h2>
+      <p>Origin : {meal.strArea}</p>
+      <img src={meal.strMealThumb} alt={"photo " + meal.strMeal} />
+      <p>{meal.strInstructions}</p>
+    </div>
   );
 };
 

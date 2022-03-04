@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: rgb(240, 240, 240);
+}
+h1 {
+  color: salmon;
+}
+input {
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.meals-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.meal-card {
+  flex: 1 0 20%;
+  min-width: 180px;
+  max-width: 280px;
+  border: 2px solid salmon;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+}
+img {
+  width: 90%;
+  border-radius: 10px;
+}
+p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  overflow: hidden;
+}
