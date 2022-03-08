@@ -1,0 +1,98 @@
+.home {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+
+  &:after {
+    content: '';
+    height: 800px;
+    width: 800px;
+    background: $color-3;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -480px;
+    right: 0px;
+    z-index: -2;
+    animation: homeAnim 26s infinite alternate;
+
+    @media screen and (max-width: 650px){
+      height: 400px;
+      width: 400px;
+      bottom: -270px;
+    }
+
+    @keyframes homeAnim {
+      50% {
+        transform: scale(0.8);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+    }
+    @media screen and (max-width: 430px){
+      display: none;
+    }
+  }
+
+  .home-main {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 95%;
+
+    .main-content {
+      user-select: none;
+
+      h1 {
+        font-size: 3.7rem;
+        position: relative;
+        font-family: $font-2;
+
+        @media screen and (max-width: 650px){
+          font-size: 2rem;
+        }
+        @media screen and (min-width: 1200px){
+          font-size: 5rem;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          height: 225px;
+          width: 225px;
+          border-radius: 50%;
+          border: 1px $color-2 solid;
+          top: -40px;
+          left: -180px;
+          z-index: -1;
+          animation: h1Anim 1.5s forwards ease;
+          transform: scale(0);
+
+          @media screen and (max-width: 850px){
+            height: 110px;
+            width: 110px;
+            left: -40px;
+            top: -15px;
+          }
+
+          @keyframes h1Anim {
+            to {
+              transform: scale(1);
+            }
+          }
+        }
+      }
+      h2 {
+        font-size: 4.2rem;
+        font-weight: 100;
+
+        @media screen and (max-width: 650px){
+          font-size: 2rem;
+        }
+        @media screen and (min-width: 1200px){
+          font-size: 5rem;
+        }
+      }
+    }
+  }
+}

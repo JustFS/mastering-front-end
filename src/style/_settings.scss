@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Questrial-Regular.ttf);
+}
+@font-face {
+  font-family: "font-2";
+  src: url(../assets/fonts/Michroma-Regular.ttf);
+}
+
+$font-1: "font-1", sans-serif;
+$font-2: "font-2", serif;
+
+$color-1: #fafeff;
+$color-2: #00c1ec;
+$color-3: #e7f7fe;
+$color-4: rgb(141, 141, 141);
+$black: rgb(40, 40, 40);
+$red: rgb(253, 87, 87);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  outline: none;
+  border: none;
+  text-decoration: none;
+
+  &::selection {
+    color: $color-1;
+    background: $color-2;
+  }
+}
+html { 
+  scroll-behavior: unset;
+}
+a,
+a:visited {
+  color: $color-4;
+}
+body {
+  font-family: $font-1;
+  height: 100vh;
+  background-color: $color-1;
+  color: $black;
+  overflow: hidden;
+
+  @media screen and (max-width: 430px){
+    position: relative;
+    max-width: 100vw;
+    overflow-y: initial;
+  }
+}
+main {
+  position: relative;
+}
+.button {
+  background: $color-3;
+  height: 55px;
+  width: 126px;
+  border-radius: 50px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    letter-spacing: 1px;
+    color: $color-2;
+  }
+}

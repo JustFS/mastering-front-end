@@ -1,0 +1,270 @@
+.contact {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  &:after {
+    content: "";
+    height: 700px;
+    width: 700px;
+    background: $color-3;
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    right: -460px;
+    z-index: -10;
+    animation: contactAnim 25s alternate infinite;
+
+    @media screen and (max-width: 840px) {
+      height: 400px;
+      width: 400px;
+      top: 520px;
+      right: -140px;
+    }
+    @media screen and (max-width: 430px) {
+      display: none;
+    }
+
+    @keyframes contactAnim {
+      50% {
+        transform: scale(1.4);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+  .navigation {
+    @media screen and (max-width: 440px) {
+      display: none;
+    }
+  }
+  .logo {
+    top: 8px;
+    right: 1rem;
+  }
+
+  .form-container {
+    margin: 7% 0 0 24%;
+    max-width: 50%;
+    position: relative;
+    max-width: 300px;
+
+    @media screen and (max-width: 740px) {
+      margin: 2rem 0 0 30%;
+    }
+    @media screen and (max-width: 440px) {
+      margin-left: 2rem;
+    }
+    h2 {
+      margin-bottom: 50px;
+
+      &:after {
+        content: "";
+        height: 70px;
+        width: 70px;
+        border: 1px $color-2 solid;
+        border-radius: 50%;
+        position: absolute;
+        top: -22px;
+        left: 133px;
+        z-index: -1;
+      }
+    }
+
+    .form-content {
+      display: grid;
+
+      input,
+      textarea {
+        background: none;
+        font-family: $font-1;
+        font-size: 1.2rem;
+        border-bottom: 1px solid $color-2;
+        border-radius: 5px;
+
+        @media screen and (min-width: 1200px) {
+          font-size: 1.5rem;
+        }
+      }
+      input {
+        padding: 10px 6px;
+        margin-bottom: 30px;
+      }
+    }
+    textarea {
+      resize: none;
+      padding: 6px 0;
+      height: 70px;
+
+      @media screen and (max-width: 540px) {
+        width: 75%;
+        padding: 12px 0;
+      }
+    }
+    input.button {
+      background: $color-3;
+      height: 55px;
+      width: 126px;
+      border-radius: 50px;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.2s;
+      border: none;
+    }
+  }
+  .formMessage {
+    p {
+      border-radius: 20px;
+      text-align: center;
+      padding: 5px 0;
+    }
+    .success {
+      background: rgb(139, 248, 139);
+    }
+    .error {
+      background: rgb(246, 147, 147);
+    }
+  }
+}
+.contact-infos {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  grid-template-rows: repeat(4, 23%) 12%;
+  height: 70%;
+  width: 30%;
+  max-width: 500px;
+
+  @media screen and (max-width: 740px) {
+    height: 200px;
+    width: 100%;
+    max-width: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "a b c"
+      "d d d"
+      "e e f";
+  }
+  @media screen and (max-width: 540px) {
+    grid-template-rows: repeat(3, 60px);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "b b b c c c"
+      "d d d d d d"
+      "e e e e f f";
+  }
+  @media screen and (max-height: 500px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 35%;
+    height: 83%;
+  }
+
+  h4 {
+    color: $color-4;
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 1.8rem;
+    }
+  }
+  p {
+    @media screen and (min-width: 1200px) {
+      font-size: 1.5rem;
+    }
+  }
+  .email,
+  .phone {
+    @media screen and (max-height: 640px) {
+      display: none;
+    }
+  }
+  .email .content p,
+  .phone .content p {
+    transition: 0.25s;
+
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+
+  .address {
+    position: relative;
+
+    @media screen and (max-width: 540px) {
+      display: none;
+    }
+    .content {
+      position: absolute;
+      right: 10px;
+    }
+  }
+  .phone {
+    position: relative;
+
+    @media screen and (max-width: 540px) {
+      text-align: center;
+      font-size: 0.8rem;
+      grid-area: b;
+    }
+
+    .content {
+      position: absolute;
+      left: 40%;
+      transform: translateX(-50%);
+
+      @media screen and (max-width: 540px) {
+        position: relative;
+        margin: 0 auto;
+        left: 0;
+        transform: translateX(0);
+      }
+    }
+  }
+  .email {
+    @media screen and (max-width: 540px) {
+      grid-area: c;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
+  .social-network {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 740px) {
+      width: 50%;
+      grid-area: d;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 2rem;
+    }
+
+    .content {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .credits {
+    text-align: center;
+
+    @media screen and (max-width: 740px) {
+      transform: translateY(20px);
+      font-size: 0.7rem;
+      margin-right: 1rem;
+      grid-area: f;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}

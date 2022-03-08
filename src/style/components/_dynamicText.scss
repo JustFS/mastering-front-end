@@ -1,0 +1,40 @@
+.dynamic-text {
+  position: relative;
+  display: flex;
+
+  #text-target {
+    display: flex;
+    width: 300px;
+    text-align: left;
+    animation: color 30s alternate infinite;
+    perspective: 200px;
+    transform: translateX(26px);
+  }
+  .word {
+    position: absolute;
+  }
+  @keyframes color {
+    0% {
+      color: blue;
+    }
+    50% {
+      color: #ec006e;
+    }
+    100% {
+      color: blue;
+    }
+  }
+  .letter {
+    transform: translateZ(200px);
+  }
+  @keyframes anim {
+    25% {
+      transform: translateZ(0px);
+      opacity: 1;
+    }
+    32% {
+      opacity: 0;
+      transform: translateZ(-280px) translateX(200px);
+    }
+  }
+}
