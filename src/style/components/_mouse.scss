@@ -9,8 +9,9 @@
   transition: 500ms ease-out;
   z-index: 2;
   backdrop-filter: brightness(115%);
-}
-.cursor.hovered {
-  width: 30px;
-  height: 30px;
+
+  &.hovered {
+    width: 30px;
+    height: 30px;
+  }
 }
