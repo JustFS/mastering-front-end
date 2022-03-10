@@ -9,4 +9,4 @@ npm i -s react-redux redux redux-thunk redux-devtools-extension
 
 ** JSON-SERVER **
 npm i -g json-server
-json-server --w db.json
+json-server --w db.json --port 3003
