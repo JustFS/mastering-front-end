@@ -1,0 +1,27 @@
+.user-container {
+  margin-left: 10px;
+  position: relative;
+
+  .user {
+    border: 1px solid $color-2;
+    text-align: center;
+    position: fixed;
+    width: 190px;
+    padding: 16px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  img {
+    border-radius: 150px;
+    height: 70px;
+    object-fit: cover;
+    margin: 10px 0 8px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}

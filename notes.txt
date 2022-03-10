@@ -1,0 +1,12 @@
+** INSTALLER REDUX **
+npm i -s react-redux redux redux-thunk redux-devtools-extension
+
+1- Provider qui englobe l'app
+2- Création store
+3- Création reducers
+4- Création actions
+
+
+** JSON-SERVER **
+npm i -g json-server
+json-server --w db.json

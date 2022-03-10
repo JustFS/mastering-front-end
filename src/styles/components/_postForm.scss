@@ -1,0 +1,28 @@
+.form-container {
+  border: 1px solid $color-2;
+  margin: 20px 0 10px;
+  width: 50%;
+  max-width: 500px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+
+    input,
+    textarea {
+      border: 1px solid $color-4;
+      font-family: "Amiri", serif;
+      padding: 5px 10px;
+      resize: none;
+    }
+
+    input[type="text"],
+    textarea {
+      margin-bottom: 6px;
+    }
+    textarea {
+      height: 80px;
+    }
+  }
+}
