@@ -1,0 +1,114 @@
+.posts-container {
+  max-width: 900px;
+  margin: 0 auto;
+
+  .post {
+    background: $black1;
+    margin: 18px 10px;
+    border-radius: 20px;
+    box-shadow: $shadow;
+    padding: 20px;
+    position: relative;
+    border-left: 1px solid rgb(143, 0, 0);
+
+    .title {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      h2 {
+        text-transform: capitalize;
+        font-size: 2rem;
+      }
+      span {
+        background: $color1;
+        border-radius: 150px;
+        font-size: 1.2rem;
+        margin: 0px 10px 0 0;
+        height: 30px;
+        width: 30px;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    h5 {
+      color: $grey;
+    }
+    .right-part {
+      position: absolute;
+      top: 20px;
+      right: 12px;
+
+      i {
+        margin: 0 5px;
+        border-radius: 20px;
+        height: 20px;
+        width: 14px;
+        font-size: 0.85rem;
+        color: $color1;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+          transform: translateX(1px);
+        }
+      }
+    }
+    p {
+      margin: 20px 0 10px;
+    }
+
+    .comment-title {
+      margin-top: 30px;
+    }
+    .comment-post {
+      h5 {
+        text-transform: capitalize;
+        color: rgb(202, 199, 199);
+        font-size: 1.2rem;
+      }
+    }
+
+    textarea {
+      width: 100%;
+      margin-top: 20px;
+      margin-left: 0;
+      border-radius: 10px 10px 0 10px;
+      height: 65px;
+      background: rgb(216, 216, 216);
+    }
+    input[type="submit"] {
+      width: 100px;
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+      margin-top: -6px;
+      border-radius: 10px 0 10px 10px;
+    }
+
+    .edit-btn {
+      border-radius: 8px;
+      padding: 5px 10px;
+      margin-left: auto;
+      margin-top: -6px;
+      margin-right: 4px;
+      display: block;
+    }
+
+    .comment-container {
+      .comment-post {
+        background: $black3;
+        border-radius: 10px;
+        margin: 6px 0;
+        padding: 8px 10px;
+
+        p {
+          margin: 5px 0;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.app-header {
+  background: $black1;
+  width: 60%;
+  min-width: 300px;
+  max-width: 650px;
+  margin: 40px auto 30px;
+  text-align: center;
+  position: relative;
+  padding: 20px 20px;
+  border-radius: 0 20px 20px 20px;
+  min-height: 250px;
+  box-shadow: $shadow;
+
+  .connect-modal {
+    height: 100%;
+
+    .header-btn {
+      position: absolute;
+      left: 0;
+      top: -24px;
+
+      button {
+        color: $white;
+        background: $black1;
+        padding: 4px 14px;
+        border-radius: 10px 10px 0 0;
+        transition: 0.2s;
+
+        &:hover {
+          filter: brightness(135%);
+        }
+      }
+    }
+    .signup-container,
+    .login-container {
+      min-height: 200px;
+      @include verticalCenter;
+
+      h3 {
+        margin-bottom: 8px;
+      }
+
+      form {
+        display: grid;
+
+        input {
+          text-align: center;
+          padding: 8px 10px;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+  .user-infos {
+    display: flex;
+    align-items: center;
+    position: relative;
+    user-select: none;
+
+    span {
+      background: $color1;
+      height: 30px;
+      width: 30px;
+      @include verticalCenter;
+      border-radius: 150px;
+      text-transform: uppercase;
+      box-shadow: $shadow;
+      transform: translateY(-10px);
+    }
+    h4 {
+      text-transform: capitalize;
+      font-size: 2.5rem;
+      transform: translate(10px, -10px);
+    }
+    button {
+      position: absolute;
+      right: 6px;
+      top: 0;
+      background: none;
+      color: $color1;
+    }
+  }
+  .new-post-modal {
+    form {
+      display: grid;
+
+      textarea {
+        height: 104px;
+        font-size: 1.3rem;
+        border-radius: 10px 10px 0 10px;
+      }
+      input {
+        width: 100px;
+        margin-left: auto;
+        margin-top: 0px;
+        border-radius: 10px 0 10px 10px;
+      }
+    }
+  }
+}

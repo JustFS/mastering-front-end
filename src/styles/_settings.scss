@@ -1,43 +1,51 @@
-@import url("https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
 
-$color-1: #fff;
-$color-2: #292929;
-$color-3: #1a8917;
-$color-4: rgb(168, 168, 168);
+$color1: rgb(211, 27, 57);
+$black1: rgb(28, 28, 28);
+$black2: rgb(49, 49, 49);
+$black3: rgb(70, 70, 70);
+$white: rgb(207, 207, 207);
+$grey: rgb(95, 95, 95);
+$shadow: 0 3px 20px rgba(0, 0, 0, 0.356);
+
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
 }
 
 body {
-  background: $color-1;
-  color: $color-2;
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
-  font-family: "Amiri", serif;
-}
-h1,
-h2 {
-  font-family: "IM Fell French Canon", serif;
+  background: $black2;
+  color: $white;
 }
 
-h1 {
-  font-size: 3rem;
-  font-family: "IM Fell French Canon", serif;
-  margin-top: 20px;
-}
+button,
 input[type="submit"] {
-  background: $color-3;
-  width: 100px;
-  color: $color-1;
-  margin-left: auto;
-  letter-spacing: 1px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  background: $color1;
+  transition: 0.2s;
+
+  &:hover {
+    filter: brightness(80%);
+    transform: translateX(2px);
+  }
 }
-.content {
-  display: grid;
-  grid-template-columns: 1fr 200px;
+
+input,
+textarea {
+  border-radius: 7px;
+  border: none;
+  resize: none;
+  margin: 5px;
+  padding: 8px;
+  background: $white;
 }
