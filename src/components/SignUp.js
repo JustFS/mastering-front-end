@@ -6,7 +6,7 @@ const SignUp = () => {
   const registerPassword = useRef();
   const [displayName, setDisplayName] = useState("");
 
-  const register = async (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
 
     try {
@@ -19,11 +19,11 @@ const SignUp = () => {
           await userAuth.user.updateProfile({
             displayName,
           });
-          // console.log(userAuth);
+          console.log(userAuth);
           window.location.reload();
         });
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
   };
 
@@ -31,15 +31,19 @@ const SignUp = () => {
     <div className="signup-container">
       <div className="signup">
         <h3>S'inscrire</h3>
-        <form onSubmit={(e) => register(e)}>
+        <form onSubmit={(e) => handleRegister(e)}>
           <input
             type="text"
             placeholder="Pseudo"
             required
             onChange={(e) => setDisplayName(e.target.value)}
           />
-          <input placeholder="Email" required ref={registerEmail} />
-          <span></span>
+          <input
+            type="email"
+            placeholder="Email"
+            required
+            ref={registerEmail}
+          />
           <input
             type="password"
             placeholder="Mot de passe"

@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { onAuthStateChanged, signOut } from "firebase/auth";
 import ConnectModal from "./components/ConnectModal";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "./utils/firebase.config";
 import CreatePost from "./components/CreatePost";
 
 const App = () => {
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(null);
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
 
-  const logout = async () => {
+  const handleLogout = async () => {
     await signOut(auth);
   };
 
@@ -22,11 +22,12 @@ const App = () => {
           <div className="user-infos">
             <span>{user?.displayName[0]}</span>
             <h4>{user?.displayName}</h4>
-            <button onClick={() => logout()}>
+            <button onClick={() => handleLogout()}>
               <i className="fa-solid fa-arrow-right-from-bracket"></i>
             </button>
           </div>
         )}
+
         {user ? <CreatePost /> : <ConnectModal />}
       </div>
       <div className="posts-container"></div>

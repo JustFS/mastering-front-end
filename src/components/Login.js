@@ -27,8 +27,8 @@ const Login = () => {
     <div className="login-container">
       <div className="login">
         <h3>Se connecter</h3>
-        <form onSubmit={(e) => handleLogin(e)} className="form-login">
-          <input placeholder="Email" type="email" required ref={loginEmail} />
+        <form className="form-login" onSubmit={(e) => handleLogin(e)}>
+          <input type="email" placeholder="Email" required ref={loginEmail} />
           <input
             type="password"
             placeholder="Mot de passe"
@@ -37,7 +37,7 @@ const Login = () => {
           />
           <input type="submit" value="Se connecter" />
           <span>
-            {error && "Le mail ou le mort de passe ne correspondent pas"}
+            {error && "Le mail ou le mot de passe ne correspondent pas"}
           </span>
         </form>
       </div>
