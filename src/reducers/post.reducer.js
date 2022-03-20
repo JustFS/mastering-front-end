@@ -30,7 +30,7 @@ export default function postReducer(state = initialState, action) {
         if (post.id === action.payload.postId) {
           return {
             ...post,
-            comments: action.payload.data,d
+            comments: action.payload.data,
           };
         } else return post;
       });
