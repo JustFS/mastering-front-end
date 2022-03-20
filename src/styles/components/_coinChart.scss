@@ -1,0 +1,83 @@
+.chart-container {
+  position: absolute;
+  z-index: 1000;
+  width: 660px;
+  top: 17px;
+  left: 8px;
+  background: rgba(82, 82, 82, 0.8);
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.548);
+  overflow: hidden;
+
+  .coin-chart {
+    padding: 20px;
+    z-index: 100;
+    position: relative;
+
+    p {
+      text-transform: capitalize;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .btn-container {
+      margin: 10px auto;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      align-items: center;
+      cursor: default;
+      width: 90%;
+
+      &:hover div:not(:hover) {
+        opacity: 0.5;
+        background: none;
+      }
+
+      div {
+        cursor: pointer;
+        transition: 0.2s;
+        border-radius: 10px;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        &.active-btn {
+          background: $color1;
+          padding: 2px 4px;
+        }
+        &:hover {
+          background: $color1;
+        }
+      }
+    }
+
+    .recharts-wrapper {
+      margin-left: -105px;
+
+      text {
+        fill: $white1;
+        font-size: 0.9rem;
+      }
+      .recharts-tooltip-wrapper {
+        color: $color1;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .recharts-tooltip-label {
+          font-size: 1.2rem;
+        }
+
+        .recharts-default-tooltip {
+          background: rgba(255, 255, 255, 0.166);
+
+          .recharts-tooltip-item-value,
+          .recharts-tooltip-item-name {
+            color: $black1 !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,54 +1,37 @@
 import React, { useEffect, useState } from "react";
-import ConnectModal from "./components/ConnectModal";
-import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "./utils/firebase.config";
-import CreatePost from "./components/CreatePost";
-import Post from "./components/Post";
-import { useDispatch, useSelector } from "react-redux";
-import { getPosts } from "./actions/post.action";
+import HeaderInfos from "./components/HeaderInfos";
+import Table from "./components/Table";
+import GlobalChart from "./components/GlobalChart";
+import ToTop from "./components/ToTop";
+import axios from "axios";
 
 const App = () => {
-  const [user, setUser] = useState(null);
-  const posts = useSelector((state) => state.postReducer);
-  const dispatch = useDispatch();
-
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
+  const [coinsData, setCoinsData] = useState([]);
 
   useEffect(() => {
-    dispatch(getPosts());
+    axios
+      .get(
+        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d%2C14d%2C30d%2C200d%2C1y`
+      )
+      .then((res) => setCoinsData(res.data));
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 145) {
+        document.querySelector(".table-header").classList.add("active");
+      } else {
+        document.querySelector(".table-header").classList.remove("active");
+      }
+    });
   }, []);
 
-  const handleLogout = async () => {
-    await signOut(auth);
-  };
-
   return (
-    <div>
-      <div className="app-header">
-        {user && (
-          <div className="user-infos">
-            <span>{user?.displayName[0]}</span>
-            <h4>{user?.displayName}</h4>
-            <button onClick={() => handleLogout()}>
-              <i className="fa-solid fa-arrow-right-from-bracket"></i>
-            </button>
-          </div>
-        )}
-
-        {user ? (
-          <CreatePost uid={user.uid} displayName={user.displayName} />
-        ) : (
-          <ConnectModal />
-        )}
-      </div>
-      <div className="posts-container">
-        {posts.length > 0 &&
-          posts
-            .sort((a, b) => b.date - a.date)
-            .map((post) => <Post post={post} key={post.id} user={user} />)}
-      </div>
+    <div className="app-container">
+      <header>
+        <HeaderInfos />
+        <GlobalChart coinsData={coinsData} />
+      </header>
+      <Table coinsData={coinsData} />
+      <ToTop />
     </div>
   );
 };

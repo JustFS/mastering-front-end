@@ -1,52 +1,82 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap");
 
-$color1: rgb(211, 27, 57);
-$black1: rgb(36, 36, 36);
-$black2: rgb(49, 49, 49);
-$black3: rgb(70, 70, 70);
-$white: rgb(207, 207, 207);
-$grey: rgb(95, 95, 95);
-$shadow: 0 3px 20px rgba(0, 0, 0, 0.356);
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500&display=swap");
 
-@mixin verticalCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+$font1: "Saira Condensed", sans-serif;
+$font2: "Baloo Bhaina 2", cursive;
+$color1: #00b7b3;
+$green2: rgb(0, 253, 148);
+$green1: rgb(2, 172, 81);
+$red1: rgb(255, 111, 86);
+$red2: rgb(251, 69, 63);
+$white1: rgb(219, 217, 217);
+$white2: rgb(172, 172, 172);
+$black1: rgb(31, 31, 31);
+$black2: rgb(10, 10, 10);
+$shadow: 0 5px 15px rgba(0, 0, 0, 0.322);
+
+:export {
+  color1: $color1;
+  green2: $green2;
+  green1: $green1;
+  red1: $red1;
+  red2: $red2;
+  black1: $black1;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Fredoka", sans-serif;
-  font-size: 1.05rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: $black2;
-  color: $white;
+  background: url(../assets/wave.svg) center/cover;
+  background-size: 2000%;
+  font-family: $font1;
+  color: $white1;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+li {
+  list-style: none;
 }
 
-button,
-input[type="submit"] {
-  background: none;
-  border: none;
-  cursor: pointer;
-  background: $color1;
-  transition: 0.2s;
+a,
+a:visited {
+  text-decoration: none;
+}
+label {
+  user-select: none;
+}
 
-  &:hover {
-    filter: brightness(80%);
-    transform: translateX(2px);
+.top {
+  margin: 10px auto 30px;
+  text-align: center;
+  animation: animLogo 1.2s infinite linear;
+  user-select: none;
+
+  img {
+    height: 22px;
+    transition: transform 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.3);
+    }
   }
-}
 
-input,
-textarea {
-  border-radius: 7px;
-  border: none;
-  resize: none;
-  margin: 5px;
-  padding: 8px;
-  background: $white;
+  @keyframes animLogo {
+    50% {
+      transform: translateY(3px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
 }
