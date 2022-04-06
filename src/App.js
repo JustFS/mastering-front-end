@@ -2,14 +2,17 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Form from "./components/Form";
 import PicCard from "./components/PicCard";
+import { useDispatch, useSelector } from "react-redux";
+import { setPicturesData } from "./feature/pictures.slice";
 
 const App = () => {
-  const [picsData, setPicsData] = useState([]);
+  const dispatch = useDispatch();
+  const picsData = useSelector((state) => state.pictures.pictures);
 
   useEffect(() => {
     axios
       .get("http://localhost:5000/pictures")
-      .then((res) => setPicsData(res.data));
+      .then((res) => dispatch(setPicturesData(res.data)));
   }, []);
 
   return (
