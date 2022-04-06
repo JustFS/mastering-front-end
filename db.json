@@ -1,0 +1,53 @@
+{
+  "pictures": [
+    {
+      "artist": "Paulin Frustro",
+      "year": "2021",
+      "photo": "https://picsum.photos/400/352",
+      "addedDate": 1649240229849,
+      "id": 1
+    },
+    {
+      "artist": "Kamau",
+      "year": "2005",
+      "photo": "https://picsum.photos/400/484",
+      "id": 3
+    },
+    {
+      "artist": "Samedixs",
+      "year": "2010",
+      "photo": "https://picsum.photos/400/396",
+      "id": 4
+    },
+    {
+      "artist": "Misan Harriman",
+      "year": "1999",
+      "photo": "https://picsum.photos/400/338",
+      "id": 5
+    },
+    {
+      "artist": "Takeshi Nagano",
+      "year": "2017",
+      "photo": "https://picsum.photos/400/499",
+      "id": 6
+    },
+    {
+      "artist": "Neil Burnell",
+      "year": "2012",
+      "photo": "https://picsum.photos/400/443",
+      "id": 7
+    },
+    {
+      "artist": "Jidhun",
+      "year": "2009",
+      "photo": "https://picsum.photos/400/364",
+      "id": 8
+    },
+    {
+      "artist": "From Scratch",
+      "year": "2022",
+      "photo": "https://picsum.photos/400/376",
+      "id": 9
+    }
+  ]
+}
