@@ -1,0 +1,158 @@
+* {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: rgb(28, 27, 27);
+}
+p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+h2 {
+  margin-left: 50px;
+}
+
+body {
+  background: whitesmoke;
+}
+nav {
+  background: black;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    li {
+      a {
+        color: whitesmoke !important;
+      }
+    }
+  }
+}
+.header {
+  text-align: center;
+}
+h1 {
+  margin-top: 30px;
+  letter-spacing: 1px;
+
+  span {
+    color: #d508a6;
+  }
+}
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 10px auto;
+
+  .article {
+    flex: 1 0 30%;
+    color: black;
+    border: 1px solid #d508a6;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+
+    h3 {
+      text-transform: capitalize;
+    }
+
+    p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-transform: capitalize;
+      margin-top: 10px;
+    }
+  }
+}
+.article-page {
+  margin-top: 30px;
+
+  h2 {
+    text-transform: capitalize;
+  }
+
+  p {
+    margin: 10px 50px;
+    text-transform: capitalize;
+  }
+  a {
+    margin-left: 50px;
+    background: #d508a6;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: inline-block;
+  }
+}
+.portfolio {
+  ul {
+    margin-top: 30px;
+
+    li {
+      margin: 20px;
+      border: 1px solid #d508a6;
+      width: 120px;
+      border-radius: 10px;
+      padding: 10px;
+      cursor: pointer;
+      position: relative;
+      transition: 0.2s;
+
+      &:hover {
+        background: #d508a6;
+
+        a {
+          color: whitesmoke;
+        }
+      }
+
+      span {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+      }
+    }
+  }
+}
+.project {
+  width: 600px;
+  margin: 0 auto;
+
+  span {
+    color: #d508a6;
+    margin: 10px 0;
+    display: block;
+
+    img {
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+  }
+  p {
+    margin: 10px 0;
+  }
+  a {
+    background: #d508a6;
+    border-radius: 10px;
+    display: block;
+    margin: 10px 0 50px;
+    padding: 4px 10px;
+    width: 130px;
+  }
+}
