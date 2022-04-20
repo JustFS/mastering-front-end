@@ -1,0 +1,23 @@
+{
+  "pictures": [
+    {
+      "artist": "Paulin Frustro",
+      "year": "2021",
+      "photo": "https://picsum.photos/400/352",
+      "addedDate": 1649240229849,
+      "id": 1
+    },
+    {
+      "artist": "Jidhun",
+      "year": "2009",
+      "photo": "https://picsum.photos/400/364",
+      "id": 8
+    },
+    {
+      "artist": "From S",
+      "year": "2017",
+      "photo": "https://picsum.photos/400/342",
+      "id": 10
+    }
+  ]
+}
