@@ -1,10 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-header {
-  background: skyblue;
+  font-family: "Segoe UI";
 }
 li {
   list-style: none;
@@ -18,12 +15,15 @@ a:visited {
 a:hover {
   color: white;
 }
+
+/**** NAVBAR ****/
 nav {
+  background: skyblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  font-size: calc(0.3rem + 2vw);
+  font-size: calc(0.5rem + 1.5vw);
 }
 nav ul {
   display: flex;
@@ -31,23 +31,24 @@ nav ul {
   width: 60%;
 }
 #icons {
-  display: none;
   cursor: pointer;
+  display: none;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 650px) {
   #icons {
     display: block;
   }
-  #icons::before {
+  #icons:before {
     content: "\2630";
   }
-  .active #icons::before {
+  .active #icons:before {
     content: "\2715";
   }
   nav ul {
     position: fixed;
     left: -100%;
-    top: 42px;
+    top: 5%;
     flex-direction: column;
     background: skyblue;
     width: 100%;
@@ -58,7 +59,7 @@ nav ul {
     padding: 3px 0;
   }
   nav li:hover {
-    background: rgb(160, 218, 241);
+    background: rgb(157, 217, 240);
   }
   nav.active ul {
     left: 0;
