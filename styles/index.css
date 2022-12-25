@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  background: rgb(31, 31, 31);
+  color: rgb(238, 238, 238);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.login,
+.new-post-container,
+.thread-container {
+  box-shadow: 0 0 0 black;
+}
+.login {
+  display: flex;
+  background: rgb(19, 19, 19);
+  border-radius: 10px;
+  padding: 25px;
+}
+.login h3 {
+  font-size: 1.5rem;
+}
+.login input {
+  width: 200px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: rgb(3, 218, 81);
+  margin-left: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  outline: none;
+}
+.new-post-container {
+  background: rgb(19, 19, 19);
+  border-radius: 10px;
+  margin: 6px 0;
+  padding: 20px;
+  display: flex;
+}
+textarea {
+  background: none;
+  resize: none;
+  border: 1px solid grey;
+  width: 60%;
+  font-size: 1.25rem;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+input[type="submit"] {
+  border-radius: 10px;
+  border: 1px solid rgb(10, 10, 10);
+  margin-left: 4px;
+  width: 100px;
+  background: rgb(97, 97, 97);
+  color: white;
+  cursor: pointer;
+  transition: 0.15s;
+  letter-spacing: 1px;
+  font-size: 1.02rem;
+}
+input[type="submit"]:hover {
+  transform: translateX(-2px);
+  filter: brightness(120%);
+  color: rgb(3, 218, 81);
+}
+.thread-container {
+  background: rgb(19, 19, 19);
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+.card {
+  background: rgb(65, 65, 65);
+  border-radius: 10px;
+  padding: 14px;
+  margin: 10px 0;
+  position: relative;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: rgb(199, 199, 199);
+}
+.card-header h3 {
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  color: rgb(3, 218, 81);
+}
+.card-header p {
+  font-style: italic;
+}
+.card textarea {
+  font-size: 1rem;
+}
+.card > p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+.edit-container {
+  display: flex;
+}
+.edit-container button {
+  border-radius: 10px;
+  border: none;
+  margin-left: 5px;
+  width: 120px;
+  background: rgb(225, 224, 224);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.edit-container button:hover {
+  transform: translateX(-2px);
+  filter: brightness(120%);
+}
+.icons-part {
+  height: 26px;
+}
+.like-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 6px;
+  font-size: 1.2rem;
+}
+.like-icon p {
+  color: grey;
+}
+.like-icon span {
+  transform: translate(4px, 1px);
+  cursor: pointer;
+  transition: 0.15s;
+}
+.like-icon span:hover {
+  transform: scale(1.15) translate(4px, 1px);
+}
+#like-btn {
+  color: rgb(3, 218, 81);
+  font-size: 1.2rem;
+}
+#dislike-btn {
+  color: grey;
+  font-size: 1.2rem;
+}
+#update-btn {
+  right: 42px;
+}
+#delete-btn {
+  right: 14px;
+  bottom: 5px;
+  transform: rotate(45deg);
+  font-size: 1.45rem;
+}
+.update-delete-icons span {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 8px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+#update-btn:hover,
+#delete-btn:hover {
+  filter: brightness(250%);
+  transform: translateX(1px) rotate(25deg);
+}
