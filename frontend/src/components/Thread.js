@@ -1,24 +1,21 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getPosts } from "../feature/post.slice";
 import Post from "./Post";
 
-const Thread = () => {
-  const dispatch = useDispatch();
-  const posts = useSelector((state) => state.posts.postsData);
+const Thread = ({ userId }) => {
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    dispatch(getPosts());
+    axios.get("http://localhost:5600/post/").then((res) => setPosts(res.data));
   }, []);
 
   return (
     <div className="thread-container">
-      {posts &&
-        posts
-          .slice()
-          .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
-          .map((post) => <Post key={post._id} post={post} />)}
+      {posts
+        .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+        .map((post) => (
+          <Post key={post._id} post={post} userId={userId} />
+        ))}
     </div>
   );
 };
