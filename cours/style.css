@@ -1,0 +1,9 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+.user-card {
+  border: 2px solid orange;
+  margin: 10px;
+}
