@@ -1,0 +1,21 @@
+header {
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+
+    @media screen and (max-width: 700px) {
+      font-size: 1rem;
+    }
+
+    &::after {
+      content: "*";
+      position: absolute;
+      transform: translateY(-6px);
+      color: $color1;
+      transition: 0.2s;
+    }
+    &:hover::after {
+      transform: scale(2);
+    }
+  }
+}

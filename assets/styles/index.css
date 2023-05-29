@@ -1,0 +1,67 @@
+body {
+  background: rgb(244, 192, 96);
+}
+
+nav {
+  background: rgb(224, 48, 77);
+  border-radius: 10px;
+}
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+}
+nav ul li {
+  list-style: none;
+}
+
+header h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  header h1 {
+    font-size: 1rem;
+  }
+}
+header h1::after {
+  content: "*";
+  position: absolute;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  color: rgb(224, 48, 77);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+header h1:hover::after {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+section {
+  height: 400px;
+  border: 1px solid rgb(23, 23, 23);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section p {
+  width: 50%;
+  text-align: center;
+}
+
+.button {
+  color: rgb(244, 192, 96);
+}/*# sourceMappingURL=index.css.map */
